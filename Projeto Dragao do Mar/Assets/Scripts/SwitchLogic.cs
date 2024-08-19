@@ -2,25 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum LeversWays
-{
-    FirstWay, SecondWay, ThirdWay
-}
+
 public class SwitchLogic : MonoBehaviour
 {
-    public GameObject[] levers;
-    public bool[] isUp;
+    bool isTurned, canTurn;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        isTurned = false;
+        canTurn = true;
+    }
+    private void OnMouseDown()
+    {
+        if(canTurn)
+        {
+            canTurn = false;
+            if (isTurned == false)
+            {
+                GetComponent<Animation>().Play("Sphere|Descer");
+                StartCoroutine(Change());
+            }
+            else
+            {
+                GetComponent<Animation>().Play("Sphere|Subirr");
+                StartCoroutine(Change());
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator Change()
     {
-        
+        yield return new WaitForSeconds(0.875f);
+        canTurn = true;
+        isTurned = !isTurned;
     }
 }
-//https://www.youtube.com/watch?v=bG-nZiJnx6s&list=PLrw9uFU6NhfOnEhqi7DRbx-eXiTrmbVGD
+// https://www.youtube.com/watch?v=UEP6DdCbaK8
