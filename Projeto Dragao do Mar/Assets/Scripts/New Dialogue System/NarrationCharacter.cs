@@ -1,10 +1,8 @@
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Scriptable Objects/Narration/Character")]
-public class NarrationCharacter : ScriptableObject
+public class NarrationCharacter : ScriptableObject //2
 {
     [SerializeField] private string m_CharacterName;
-
-    public string CharacterName => m_CharacterName;
+    public string CharacterName => m_CharacterName; //1
 }
-//https://www.youtube.com/watch?v=JnPHXoARH80

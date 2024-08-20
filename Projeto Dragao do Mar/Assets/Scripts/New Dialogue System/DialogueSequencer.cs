@@ -1,16 +1,16 @@
 
 public class DialogueException : System.Exception
 {
-    public DialogueException(string message)
-        : base(message)
+    public DialogueException(string message) : base(message)
     {
+
     }
 }
 
-public class DialogueSequencer
+public class DialogueSequencer //1
 {
     public delegate void DialogueCallback(Dialogue dialogue);
-    public delegate void DialogueNodeCallback(DialogueNode node);
+    public delegate void DialogueNodeCallback(DialogueNode dialogue);
 
     public DialogueCallback OnDialogueStart;
     public DialogueCallback OnDialogueEnd;
@@ -20,13 +20,13 @@ public class DialogueSequencer
     private Dialogue m_CurrentDialogue;
     private DialogueNode m_CurrentNode;
 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue) //2
     {
-        if (m_CurrentDialogue == null)
+        if(m_CurrentDialogue == null)
         {
             m_CurrentDialogue = dialogue;
             OnDialogueStart?.Invoke(m_CurrentDialogue);
-            //StartDialogueNode(dialogue.FirstNode);
+            StartDialogueNode(dialogue.FirstNode);
         }
         else
         {
@@ -44,11 +44,11 @@ public class DialogueSequencer
         }
         else
         {
-            throw new DialogueException("Trying to stop a dialogue that ins't running.");
+            throw new DialogueException("Trying to stop a dialogue that isn't running.");
         }
     }
 
-    private bool CanStartNode(DialogueNode node)
+    public bool CanStartNode(DialogueNode node)
     {
         return (m_CurrentNode == null || node == null || m_CurrentNode.CanBeFollowedByNode(node));
     }
@@ -57,36 +57,15 @@ public class DialogueSequencer
     {
         if (CanStartNode(node))
         {
-            StopDialogueNode(m_CurrentNode);
+            //StopDialogueNode(m_CurrentNode);
 
             m_CurrentNode = node;
 
-            if (m_CurrentNode != null)
+            if(m_CurrentNode != null)
             {
                 OnDialogueNodeStart?.Invoke(m_CurrentNode);
             }
-            else
-            {
-                EndDialogue(m_CurrentDialogue);
-            }
-        }
-        else
-        {
-            throw new DialogueException("Failed to start dialogue node.");
-        }
-    }
-
-    private void StopDialogueNode(DialogueNode node)
-    {
-        if (m_CurrentNode == node)
-        {
-            OnDialogueNodeEnd?.Invoke(m_CurrentNode);
-            m_CurrentNode = null;
-        }
-        else
-        {
-            throw new DialogueException("Trying to stop a dialogue node that ins't running.");
         }
     }
 }
-//https://www.youtube.com/watch?v=JnPHXoARH80
+// https://www.youtube.com/watch?v=JnPHXoARH80 => 5:07
