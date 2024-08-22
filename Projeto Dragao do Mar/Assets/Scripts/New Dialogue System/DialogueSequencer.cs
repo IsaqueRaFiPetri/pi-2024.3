@@ -38,7 +38,7 @@ public class DialogueSequencer //1
     {
         if (m_CurrentDialogue == dialogue)
         {
-            StopDialogueNode(m_CurrentNode);
+            //StopDialogueNode(m_CurrentNode);
             OnDialogueEnd?.Invoke(m_CurrentDialogue);
             m_CurrentDialogue = null;
         }
