@@ -18,4 +18,3 @@ public class DialogueTrigger : InteractableObject
 
     
 }
-//ChatGPT
