@@ -7,7 +7,7 @@ using System.Collections.Generic;
 public class DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI dialogueText; // Texto para exibir o diálogo
-    //public TextMeshProUGUI nameText; // Texto para exibir o diálogo
+    public TextMeshProUGUI nameText; // Texto para exibir o diálogo
     public GameObject dialoguePanel; // Painel de diálogo
     public Button[] responseButtons; // Array de botões de resposta
 
@@ -25,6 +25,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         currentDialogue = dialogue;
+        //nameText = currentDialogue.name;
         dialoguePanel.SetActive(true);
         sentences.Clear();
 
