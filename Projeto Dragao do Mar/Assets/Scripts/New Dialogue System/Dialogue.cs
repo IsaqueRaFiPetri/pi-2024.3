@@ -1,8 +1,10 @@
 using UnityEngine;
 
-[CreateAssetMenu (menuName = "Scriptable Objects/Narration/Dialogue/Dialogue")]
-public class Dialogue : MonoBehaviour
+[System.Serializable]
+public class Dialogue
 {
-    [SerializeField] private DialogueNode m_FirstNode;
-    public DialogueNode FirstNode => m_FirstNode; //1
+    public string name; // Nome do NPC ou do diálogo
+    [TextArea(3, 10)]
+    public string[] sentences; // Frases do diálogo
+    public DialogueOption[] options; // Opções de resposta
 }
