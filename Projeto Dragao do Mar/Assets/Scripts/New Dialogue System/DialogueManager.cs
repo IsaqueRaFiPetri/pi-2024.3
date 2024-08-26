@@ -7,7 +7,7 @@ using System.Collections.Generic;
 public class DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI dialogueText; // Texto para exibir o diálogo
-    public TextMeshProUGUI nameText; // Texto para exibir o diálogo
+    //public TextMeshProUGUI nameText; // Texto para exibir o diálogo
     public GameObject dialoguePanel; // Painel de diálogo
     public Button[] responseButtons; // Array de botões de resposta
 
@@ -69,7 +69,7 @@ public class DialogueManager : MonoBehaviour
             for (int i = 0; i < currentDialogue.options.Length; i++)
             {
                 responseButtons[i].gameObject.SetActive(true);
-                responseButtons[i].GetComponentInChildren<Text>().text = currentDialogue.options[i].responseText;
+                responseButtons[i].GetComponentInChildren<TMP_Text>().text = currentDialogue.options[i].responseText;
 
                 // Adiciona o listener ao botão
                 int optionIndex = i; // Criação de uma cópia local para evitar problemas de escopo
@@ -110,7 +110,7 @@ public class DialogueManager : MonoBehaviour
     // Método para encerrar o diálogo
     void EndDialogue()
     {
-        PlayerStats.instance.SetUIingMode();
+        PlayerStats.instance.SetWalkingMode();
         dialoguePanel.SetActive(false);
         HideResponseButtons();
         Debug.Log("Fim do diálogo.");
