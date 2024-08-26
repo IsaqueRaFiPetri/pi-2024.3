@@ -110,6 +110,7 @@ public class DialogueManager : MonoBehaviour
     // Método para encerrar o diálogo
     void EndDialogue()
     {
+        PlayerStats.instance.SetUIingMode();
         dialoguePanel.SetActive(false);
         HideResponseButtons();
         Debug.Log("Fim do diálogo.");
