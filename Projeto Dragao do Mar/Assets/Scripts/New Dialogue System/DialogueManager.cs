@@ -25,7 +25,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         currentDialogue = dialogue;
-        //nameText = currentDialogue.name;
+        nameText.SetText(currentDialogue.name);
         dialoguePanel.SetActive(true);
         sentences.Clear();
 
