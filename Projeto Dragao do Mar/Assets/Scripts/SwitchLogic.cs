@@ -32,7 +32,7 @@ public class SwitchLogic : MonoBehaviour
 
     IEnumerator Change()
     {
-        yield return new WaitForSeconds(0.875f);
+        yield return new WaitForSeconds(0.417f);
         canTurn = true;
         isTurned = !isTurned;
     }
