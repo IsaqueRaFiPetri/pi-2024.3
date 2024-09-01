@@ -14,6 +14,8 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences; // Fila de frases do diálogo atual
     private Dialogue currentDialogue; // Referência ao diálogo atual
 
+    [HideInInspector] public bool hasTriggered;
+
     void Start()
     {
         sentences = new Queue<string>();
@@ -24,6 +26,8 @@ public class DialogueManager : MonoBehaviour
     // Método para iniciar o diálogo
     public void StartDialogue(Dialogue dialogue)
     {
+        hasTriggered = true;
+
         currentDialogue = dialogue;
         nameText.SetText(currentDialogue.name);
         dialoguePanel.SetActive(true);
@@ -111,6 +115,8 @@ public class DialogueManager : MonoBehaviour
     // Método para encerrar o diálogo
     void EndDialogue()
     {
+        hasTriggered = false;
+
         PlayerStats.instance.SetWalkingMode();
         dialoguePanel.SetActive(false);
         HideResponseButtons();

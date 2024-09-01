@@ -4,21 +4,24 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.AI;
 
-public enum Npc
+public enum NpcState
 {
-    Break, Walking, DoingSomething
+    Break, Walking, DoingSomething, Dialoguing
 }
 public class NpcFunctions : MonoBehaviour
 {
     NavMeshAgent agent;
-    public Npc npc;
+    public NpcState npc;
     bool canWalk;
 
-    public UnityEvent OnBreak, OnWalking, OnDoing; 
+    public UnityEvent OnBreak, OnWalking, OnDoing, OnDialogue;
+    DialogueManager diaManager;
+    public Transform playerTransform;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        diaManager = FindObjectOfType<DialogueManager>();
         SetDestiny();
     }
 
@@ -26,23 +29,37 @@ public class NpcFunctions : MonoBehaviour
     {
         switch (npc)
         {
-            case Npc.Break: //modod de aguardo
+            case NpcState.Break: //modod de aguardo
                 break;
-            case Npc.Walking:
+            case NpcState.Walking:
                 if (agent.stoppingDistance >= agent.remainingDistance)
                 { //se estiver chegando ao destino, espere
-                    SetNpcState(Npc.Break);
+                    SetNpcState(NpcState.Break);
                 }
                 break;
-            case Npc.DoingSomething:
+            case NpcState.DoingSomething:
                 break;
-
+            case NpcState.Dialoguing:
+                // While dialoguing, ensure NPC does not move
+                agent.isStopped = true;
+                break;
+        }
+        
+        if(diaManager.hasTriggered == true)
+        {
+            SetNpcState(NpcState.Dialoguing);
+            StartCoroutine(IsDialoguing());
+        }
+        else if(diaManager.hasTriggered == false)
+        {
+            SetNpcState(NpcState.Break);
+            StartCoroutine(GiveaBreak());
         }
     }
     void SetDestiny() //anda para um ponto aleatório
     {
         agent.SetDestination(SetRandomNavTarget());
-        SetNpcState(Npc.Walking);
+        SetNpcState(NpcState.Walking);
     }
     Vector3 SetRandomNavTarget()
     {
@@ -52,39 +69,61 @@ public class NpcFunctions : MonoBehaviour
         NavMeshHit hit;
         NavMesh.SamplePosition(randomPosition, out hit, 5, 1);
         Vector3 finalPosition = hit.position;
-        SetNpcState(Npc.Walking);
-
         return finalPosition;
     }
     IEnumerator GiveaBreak()
     {
         yield return new WaitForSeconds(2); //tempo de espera
 
-        if (canWalk)
+        SetDestiny();   //setar um novo destino e começar a ir
+    }
+    IEnumerator IsDialoguing()
+    {
+        if (playerTransform != null)
         {
-            SetRandomNavTarget();
-        }
-        else
-        {
-            SetRandomNavTarget(); //setar um novo destino e começar a patrulha
+            // Para o NPC enquanto dialoga
+            agent.isStopped = true;
+
+            // Gira o NPC na direção do jogador
+            Vector3 directionToPlayer = (playerTransform.position - transform.position).normalized;
+            Quaternion lookRotation = Quaternion.LookRotation(new Vector3(directionToPlayer.x, 0, directionToPlayer.z));
+
+            // Suaviza a rotação
+            float rotationSpeed = 5f;
+            while (Quaternion.Angle(transform.rotation, lookRotation) > 0.1f)
+            {
+                transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed);
+                yield return null;
+            }
+
+            // Aqui você pode adicionar lógica para o diálogo (por exemplo, exibir texto na tela)
+            yield return new WaitForSeconds(5);  // Simulando a duração do diálogo
+
+            // Após o diálogo, permita que o NPC volte a andar
+            agent.isStopped = false;
+            SetNpcState(NpcState.Break);  // Muda o estado de volta para "Break" ou qualquer outro
         }
     }
 
-    public void SetNpcState(Npc state)
+    public void SetNpcState(NpcState state)
     {
-        state = npc;
+        npc = state;
 
         switch(state)
         {
-            case Npc.Break:
+            case NpcState.Break:
                 StartCoroutine(GiveaBreak()); //coroutine para esperar
                 OnBreak.Invoke();
                 break;
-            case Npc.Walking:
+            case NpcState.Walking:
                 OnWalking.Invoke();
                 break;
-            case Npc.DoingSomething:
+            case NpcState.DoingSomething:
                 OnDoing.Invoke();
+                break;
+            case NpcState.Dialoguing:
+                StartCoroutine(IsDialoguing());
+                OnDialogue.Invoke();
                 break;
 
         }
