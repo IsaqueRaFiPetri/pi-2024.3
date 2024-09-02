@@ -48783,7 +48783,7 @@ MonoBehaviour:
   dialogue:
     name: Dona Soares
     sentences:
-    - "N\xE3o escute nada de que o Ricardo fale, ele \xE9 s\xF3 uma crian\xE7a"
+    - "N\xE3o leia nada de que o Ricardo fale, ele \xE9 s\xF3 uma crian\xE7a"
     options: []
   dialogueManager: {fileID: 1301513593}
   audioSource: {fileID: 1301513595}
