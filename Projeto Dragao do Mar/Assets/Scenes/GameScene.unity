@@ -4448,7 +4448,7 @@ GameObject:
   - component: {fileID: 126991800}
   m_Layer: 0
   m_Name: NPC_Menina
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7074,7 +7074,7 @@ GameObject:
   - component: {fileID: 187079829}
   m_Layer: 0
   m_Name: NPC_Menina (1)
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7933,7 +7933,7 @@ GameObject:
   - component: {fileID: 207966297}
   m_Layer: 0
   m_Name: NPC_Menino
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22734,7 +22734,7 @@ GameObject:
   - component: {fileID: 677992814}
   m_Layer: 0
   m_Name: NPC_SeuLuis
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32109,7 +32109,7 @@ GameObject:
   - component: {fileID: 852444351}
   m_Layer: 0
   m_Name: NPC_Menino (3)
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34592,8 +34592,8 @@ Transform:
   m_LocalScale: {x: 0.06603705, y: 1.3171408, z: 0.039280802}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 87384246}
   - {fileID: 1788077359}
+  - {fileID: 87384246}
   m_Father: {fileID: 1978950801}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -45763,7 +45763,7 @@ GameObject:
   - component: {fileID: 1215616833}
   m_Layer: 0
   m_Name: NPC_Menino (8)
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49156,7 +49156,7 @@ GameObject:
   - component: {fileID: 1316576391}
   m_Layer: 0
   m_Name: NPC_Mulher
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49764,7 +49764,7 @@ GameObject:
   - component: {fileID: 1322965764}
   m_Layer: 0
   m_Name: NPC_Marinee
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52117,6 +52117,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Book_Open
       objectReference: {fileID: 0}
+    - target: {fileID: 6098996794725213001, guid: 6353832c19eb9674b8143b16ab17c820, type: 3}
+      propertyPath: m_TagString
+      value: Interagivel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6353832c19eb9674b8143b16ab17c820, type: 3}
 --- !u!1001 &1389644802
@@ -54305,7 +54309,7 @@ GameObject:
   - component: {fileID: 1459533836}
   m_Layer: 0
   m_Name: NPC_Menino (11)
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57543,7 +57547,7 @@ GameObject:
   - component: {fileID: 1546185368}
   m_Layer: 0
   m_Name: NPC_Menina
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61486,7 +61490,7 @@ GameObject:
   - component: {fileID: 1666517078}
   m_Layer: 0
   m_Name: NPC_Mulher
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62857,7 +62861,7 @@ GameObject:
   - component: {fileID: 1703319988}
   m_Layer: 0
   m_Name: NPC_Mulher (1)
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66638,7 +66642,7 @@ GameObject:
   - component: {fileID: 1802047654}
   m_Layer: 0
   m_Name: NPC_Padre
-  m_TagString: Untagged
+  m_TagString: Interagivel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70686,8 +70690,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6315288, y: 0.07800679, z: 0.3831183}
-  m_Center: {x: 0, y: 0.03974931, z: 0.0000001490116}
+  m_Size: {x: 0.9304657, y: 0.3539413, z: 0.6463981}
+  m_Center: {x: -0.006690979, y: 0.043554183, z: -0.008880975}
 --- !u!1 &1928731209
 GameObject:
   m_ObjectHideFlags: 0
@@ -77781,19 +77785,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c0797dbe3de73884eb72e25d38d4f6e3, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0797dbe3de73884eb72e25d38d4f6e3, type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.563413
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0797dbe3de73884eb72e25d38d4f6e3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.77428
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0797dbe3de73884eb72e25d38d4f6e3, type: 3}
       propertyPath: m_LocalScale.z
-      value: 5.3654575
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0797dbe3de73884eb72e25d38d4f6e3, type: 3}
       propertyPath: m_LocalPosition.x

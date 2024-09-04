@@ -28,6 +28,7 @@ public class PlayerInteraction : MonoBehaviour
                 hit.collider.SendMessage("Interact", SendMessageOptions.DontRequireReceiver);
                 //print(hit.collider.name);
             }
+            if(hit.collider.CompareTag("Interagivel"))
             interactionInstruction.SetActive(true);
         }
         else
