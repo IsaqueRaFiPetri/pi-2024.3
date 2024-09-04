@@ -9,6 +9,7 @@ public class PlayerInteraction : MonoBehaviour
     public UnityEvent OnInteractionEffected;
     Transform cam;
     public float handDistance = 3;
+    public GameObject interactionInstruction;
     
     void Start()
     {
@@ -27,6 +28,11 @@ public class PlayerInteraction : MonoBehaviour
                 hit.collider.SendMessage("Interact", SendMessageOptions.DontRequireReceiver);
                 //print(hit.collider.name);
             }
+            interactionInstruction.SetActive(true);
+        }
+        else
+        {
+            interactionInstruction.SetActive(false);
         }
     }
 }
