@@ -19,12 +19,12 @@ public class SwitchLogic : MonoBehaviour
             canTurn = false;
             if (isTurned == false)
             {
-                GetComponent<Animation>().Play("Sphere|Descer");
+                GetComponent<Animation>().Play("Alavanca_CimaBaixo");
                 StartCoroutine(Change());
             }
             else
             {
-                GetComponent<Animation>().Play("Sphere|Subirr");
+                GetComponent<Animation>().Play("Alavanca_BaixoCima");
                 StartCoroutine(Change());
             }
         }
