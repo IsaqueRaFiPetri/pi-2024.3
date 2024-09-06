@@ -14,8 +14,10 @@ public class DoorController : MonoBehaviour
         // Generate the current code based on the lever states
         foreach (Lever lever in levers)
         {
-            currentCode += lever.isActivated ? "1" : "0";
+            currentCode += (int)lever.mode;
         }
+
+        print(currentCode + "/" + secretCode);
 
         // If the code matches, open the door
         if (currentCode == secretCode)
@@ -28,7 +30,11 @@ public class DoorController : MonoBehaviour
     private void OpenDoor()
     {
         // Example: move the door upward
-        door.transform.position += new Vector3(0, 5, 0); // Adjust the movement as needed
+        while (door.transform.position.y < 5) 
+        {
+            door.transform.position += new Vector3(0, 5, 0); // Adjust the movement as needed
+        }
+       
         Debug.Log("Door opened!");
     }
 }

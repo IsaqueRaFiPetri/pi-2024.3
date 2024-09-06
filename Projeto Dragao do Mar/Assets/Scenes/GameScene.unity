@@ -5609,7 +5609,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152683457}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -237, y: 3, z: -85.51691}
+  m_LocalPosition: {x: -206.1, y: 3, z: 16.2}
   m_LocalScale: {x: 10.3273115, y: 4.0513124, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8726,6 +8726,7 @@ MonoBehaviour:
   isActivated: 1
   leverID: 2
   isDown: 0
+  mode: 0
 --- !u!1 &227311781
 GameObject:
   m_ObjectHideFlags: 0
@@ -15551,7 +15552,7 @@ MonoBehaviour:
   - {fileID: 1837208745}
   - {fileID: 226944184}
   - {fileID: 1120645791}
-  secretCode: 1001
+  secretCode: 0100
   door: {fileID: 1275034018}
 --- !u!21 &480800337
 Material:
@@ -41143,9 +41144,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe860dba059c934dabb33aa6182a39d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isActivated: 0
+  isActivated: 1
   leverID: 3
   isDown: 0
+  mode: 0
 --- !u!1 &1120936433
 GameObject:
   m_ObjectHideFlags: 0
@@ -54800,6 +54802,7 @@ MonoBehaviour:
   isActivated: 0
   leverID: 0
   isDown: 0
+  mode: 0
 --- !u!1001 &1440426673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67400,9 +67403,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe860dba059c934dabb33aa6182a39d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isActivated: 1
+  isActivated: 0
   leverID: 1
   isDown: 0
+  mode: 0
 --- !u!1 &1838018944
 GameObject:
   m_ObjectHideFlags: 0
@@ -82519,7 +82523,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2586897333296971884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00010681152, y: -1.002, z: -0.0048828125}
+  m_LocalPosition: {x: 0.00010681152, y: -0.989, z: -0.0048828125}
   m_LocalScale: {x: 1.5834, y: 1.5834, z: 1.5834}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -87806,7 +87810,7 @@ MonoBehaviour:
   loaded: 1
   tooglehelmet: 0
   skin:
-    color: {r: 0.39215687, g: 0.20392157, b: 0.1254902, a: 1}
+    color: {r: 0.39215684, g: 0.20531772, b: 0.12729698, a: 1}
     smoothness: 0.154
   eyes:
     color: {r: 0.00024509805, g: 0.0004901961, b: 0, a: 1}
