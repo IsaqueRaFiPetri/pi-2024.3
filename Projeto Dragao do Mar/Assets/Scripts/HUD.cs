@@ -16,12 +16,6 @@ public class HUD : MonoBehaviour
         SetPoints();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void SetPoints()
     {
         ppBar.fillAmount = (float)PlayerStats.politicalPoints / (float)PlayerStats.politicsPointsToConclude;

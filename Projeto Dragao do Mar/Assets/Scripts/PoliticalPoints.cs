@@ -13,14 +13,28 @@ public class PoliticalPoints : MonoBehaviour
 
     void Update()
     {
-        if(ppAmount >= ppMax)
+        if (ppAmount >= ppMax)
         {
             uWinPainel.SetActive(true);
         }
     }
-    public void SetPP()
+    public void AddPoliticalPoints(int points)
     {
-        ppBar.fillAmount = (float)ppAmount / (float)ppMax;
+        ppAmount += points;
+        //ppAmount = Mathf.Clamp(currentPoliticalPoints, 0, maxPoliticalPoints);
+        //UpdatePoliticalPointsBar();
     }
 
+    // Exemplo de método para quando o jogador interagir com um NPC
+    public void OnNPCInteraction()
+    {
+        AddPoliticalPoints(10);  // Por exemplo, o jogador ganha 10 pontos ao falar com um NPC
+    }
+
+    // Exemplo de método para quando o jogador completar uma quest
+    public void OnQuestCompleted()
+    {
+        AddPoliticalPoints(20);  // Por exemplo, o jogador ganha 20 pontos ao completar uma quest
+
+    }
 }
