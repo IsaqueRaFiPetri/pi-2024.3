@@ -62,7 +62,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return null;
+            yield return new WaitForSeconds(5f);
         }
     }
 
@@ -115,6 +115,8 @@ public class DialogueManager : MonoBehaviour
     // Método para encerrar o diálogo
     void EndDialogue()
     {
+        //DialogueTrigger.DialogueGivePoints();
+
         hasTriggered = false;
 
         PlayerStats.instance.SetWalkingMode();

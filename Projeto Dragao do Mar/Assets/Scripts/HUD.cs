@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HUD : MonoBehaviour
+public class HUD : MonoBehaviour //Esse vai aonde está a barra
 {
     public static HUD instance;
     public Image ppBar;

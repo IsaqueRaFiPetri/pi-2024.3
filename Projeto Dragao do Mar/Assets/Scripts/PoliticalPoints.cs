@@ -3,38 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PoliticalPoints : MonoBehaviour
-{
-
-    public static int ppMax;
-    int ppAmount;
-    public Image ppBar;
-    public GameObject uWinPainel;
-
-    void Update()
-    {
-        if (ppAmount >= ppMax)
-        {
-            uWinPainel.SetActive(true);
-        }
-    }
-    public void AddPoliticalPoints(int points)
-    {
-        ppAmount += points;
-        //ppAmount = Mathf.Clamp(currentPoliticalPoints, 0, maxPoliticalPoints);
-        //UpdatePoliticalPointsBar();
-    }
-
+public class PoliticalPoints : MonoBehaviour //Este vai num vazio
+{  
     // Exemplo de método para quando o jogador interagir com um NPC
-    public void OnNPCInteraction()
+    public static void OnNPCInteraction(int points)
     {
-        AddPoliticalPoints(10);  // Por exemplo, o jogador ganha 10 pontos ao falar com um NPC
+        PlayerStats.GainPoints(points);  // Por exemplo, o jogador ganha 10 pontos ao falar com um NPC
     }
 
     // Exemplo de método para quando o jogador completar uma quest
-    public void OnQuestCompleted()
+    public void OnQuestCompleted(int points)
     {
-        AddPoliticalPoints(20);  // Por exemplo, o jogador ganha 20 pontos ao completar uma quest
+        PlayerStats.GainPoints(points);  // Por exemplo, o jogador ganha 20 pontos ao completar uma quest
 
     }
 }

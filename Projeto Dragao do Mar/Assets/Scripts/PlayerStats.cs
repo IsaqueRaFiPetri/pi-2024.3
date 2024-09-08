@@ -24,7 +24,6 @@ public class PlayerStats : MonoBehaviour
     {
         instance = this;
         controller = GetComponent<FirstPersonController>();
-
     }
 
     void Update()
@@ -70,7 +69,6 @@ public class PlayerStats : MonoBehaviour
         HUD.instance.SetPoints();
         if(politicalPoints >= politicsPointsToConclude)
         {
-            HUD.instance.SetPoints();
             HUD.instance.conclusionPainel.SetActive(true);
         }
     }
