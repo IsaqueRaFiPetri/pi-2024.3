@@ -7,4 +7,6 @@ public class Dialogue
     [TextArea(3, 10)]
     public string[] sentences; // Frases do diálogo
     public DialogueOption[] options; // Opções de resposta
+    public bool hasGivedPoints;
+    public int pointsToGive;
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,7 +11,7 @@ public class PlayerStats : MonoBehaviour
     public static PlayerStats instance;
     PlayerModes modes;
     FirstPersonController controller;
-    public static int politicalPoints, politicsPointsToConclude = 4;
+    public static int politicalPoints, politicsPointsToConclude = 100;
 
     public UnityEvent OnPause, OnUnpause;
 
@@ -28,6 +26,8 @@ public class PlayerStats : MonoBehaviour
 
     void Update()
     {
+        print(politicalPoints);
+
         switch (modes)
         {
             case PlayerModes.Walking:
@@ -65,7 +65,7 @@ public class PlayerStats : MonoBehaviour
 
     public static void GainPoints(int politcPoints)
     {
-        politicalPoints = politcPoints;
+        politicalPoints += politcPoints;
         HUD.instance.SetPoints();
         if(politicalPoints >= politicsPointsToConclude)
         {
@@ -93,13 +93,6 @@ public class PlayerStats : MonoBehaviour
     {
         modes = PlayerModes.Walking;
     }
-
-    public void AddPoints(int points)
-    {
-        points += 1;
-        points = politicalPoints;
-    }
-
     public void Teleport(Vector3 position, Quaternion rotation)
     {
         transform.position = position;

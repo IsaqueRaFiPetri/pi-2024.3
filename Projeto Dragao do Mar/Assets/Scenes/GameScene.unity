@@ -4409,10 +4409,11 @@ MonoBehaviour:
     sentences:
     - "Se almenos j\xE1 existicem celulares..."
     options: []
+    hasGivedPoints: 0
+    pointsToGive: 0
   dialogueManager: {fileID: 1301513593}
   audioSource: {fileID: 1301513595}
-  hasGivedPoints: 0
-  pointsTeRecieve: 0
+  ppPoints: {fileID: 0}
 --- !u!114 &126991801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6919,10 +6920,11 @@ MonoBehaviour:
     sentences:
     - "Bom dia sinh\xF4..."
     options: []
+    hasGivedPoints: 0
+    pointsToGive: 0
   dialogueManager: {fileID: 1301513593}
   audioSource: {fileID: 1301513595}
-  hasGivedPoints: 0
-  pointsTeRecieve: 0
+  ppPoints: {fileID: 0}
 --- !u!114 &187079830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7834,7 +7836,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 207966292}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 229.08368, y: 0, z: 180.64574}
+  m_LocalPosition: {x: 229.08368, y: -0.13100004, z: 180.64574}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7933,6 +7935,10 @@ MonoBehaviour:
             name: 
             sentences: []
             options: []
+            hasGivedPoints: 0
+            pointsToGive: 0
+        hasGivedPoints: 0
+        pointsToGive: 0
     - responseText: "N\xE3o muito bem, e voc\xEA baixinho?"
       nextDialogue:
         name: Rodrigo
@@ -7946,10 +7952,15 @@ MonoBehaviour:
             name: 
             sentences: []
             options: []
+            hasGivedPoints: 0
+            pointsToGive: 0
+        hasGivedPoints: 0
+        pointsToGive: 0
+    hasGivedPoints: 0
+    pointsToGive: 0
   dialogueManager: {fileID: 1301513593}
   audioSource: {fileID: 750493109}
-  hasGivedPoints: 0
-  pointsTeRecieve: 0
+  ppPoints: {fileID: 0}
 --- !u!1 &208013410
 GameObject:
   m_ObjectHideFlags: 0
@@ -14920,7 +14931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.900002
+      value: 3.19
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21976,15 +21987,20 @@ MonoBehaviour:
         name: 
         sentences: []
         options: []
+        hasGivedPoints: 0
+        pointsToGive: 0
     - responseText: Tem estado meio ruim.
       nextDialogue:
         name: 
         sentences: []
         options: []
+        hasGivedPoints: 0
+        pointsToGive: 0
+    hasGivedPoints: 0
+    pointsToGive: 0
   dialogueManager: {fileID: 1301513593}
   audioSource: {fileID: 1301513595}
-  hasGivedPoints: 0
-  pointsTeRecieve: 0
+  ppPoints: {fileID: 0}
 --- !u!114 &677992815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22999,10 +23015,11 @@ MonoBehaviour:
     sentences:
     - Piu... Piu.
     options: []
+    hasGivedPoints: 0
+    pointsToGive: 0
   dialogueManager: {fileID: 1301513593}
   audioSource: {fileID: 881912709}
-  hasGivedPoints: 0
-  pointsTeRecieve: 0
+  ppPoints: {fileID: 0}
 --- !u!65 &705997381
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30829,10 +30846,11 @@ MonoBehaviour:
     sentences:
     - Bom dia...
     options: []
+    hasGivedPoints: 0
+    pointsToGive: 0
   dialogueManager: {fileID: 1301513593}
   audioSource: {fileID: 1301513595}
-  hasGivedPoints: 0
-  pointsTeRecieve: 0
+  ppPoints: {fileID: 0}
 --- !u!114 &852444352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46968,10 +46986,11 @@ MonoBehaviour:
     sentences:
     - "Os portugu\xEAses vieram para c\xE1 e saquearam tudo!!"
     options: []
+    hasGivedPoints: 0
+    pointsToGive: 0
   dialogueManager: {fileID: 1301513593}
   audioSource: {fileID: 1301513595}
-  hasGivedPoints: 0
-  pointsTeRecieve: 0
+  ppPoints: {fileID: 0}
 --- !u!114 &1215616834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50474,10 +50493,11 @@ MonoBehaviour:
     sentences:
     - "N\xE3o leia nada de que o Ricardo fale, ele \xE9 s\xF3 uma crian\xE7a"
     options: []
+    hasGivedPoints: 0
+    pointsToGive: 0
   dialogueManager: {fileID: 1301513593}
   audioSource: {fileID: 1301513595}
-  hasGivedPoints: 0
-  pointsTeRecieve: 0
+  ppPoints: {fileID: 0}
 --- !u!114 &1316576392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50764,7 +50784,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1280899642068255851, guid: 0da600d002dc6404693c3b74e0265a3c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.13221288
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1280899642068255851, guid: 0da600d002dc6404693c3b74e0265a3c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -52655,6 +52675,8 @@ MonoBehaviour:
             sentences:
             - Que bom!
             options: []
+            hasGivedPoints: 0
+            pointsToGive: 0
         - responseText: "N\xE3o, o que tenho que fazer?"
           nextDialogue:
             name: Marinheiro
@@ -52669,6 +52691,10 @@ MonoBehaviour:
               teclas de movimenta\xE7\xE3o<b>.\r"
             - "Boa sorte Sinh\xF4."
             options: []
+            hasGivedPoints: 0
+            pointsToGive: 0
+        hasGivedPoints: 0
+        pointsToGive: 0
     - responseText: Pessimo
       nextDialogue:
         name: Marineiro
@@ -52682,6 +52708,8 @@ MonoBehaviour:
             sentences:
             - Que bom!
             options: []
+            hasGivedPoints: 0
+            pointsToGive: 0
         - responseText: "N\xE3o, o que tenho que fazer?"
           nextDialogue:
             name: Marinheiro
@@ -52696,10 +52724,15 @@ MonoBehaviour:
               teclas de movimenta\xE7\xE3o<b>.\r"
             - "Boa sorte Sinh\xF4."
             options: []
+            hasGivedPoints: 0
+            pointsToGive: 0
+        hasGivedPoints: 0
+        pointsToGive: 0
+    hasGivedPoints: 0
+    pointsToGive: 1
   dialogueManager: {fileID: 1301513593}
   audioSource: {fileID: 1301513595}
-  hasGivedPoints: 0
-  pointsTeRecieve: 0
+  ppPoints: {fileID: 1353994578}
 --- !u!4 &1325703623 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 50d653a6b3b126940acc12d1a727321d, type: 3}
@@ -56682,10 +56715,11 @@ MonoBehaviour:
     sentences:
     - "Como ser\xE1 que deve ser o ano de 2024?"
     options: []
+    hasGivedPoints: 0
+    pointsToGive: 0
   dialogueManager: {fileID: 1301513593}
   audioSource: {fileID: 1301513595}
-  hasGivedPoints: 0
-  pointsTeRecieve: 0
+  ppPoints: {fileID: 0}
 --- !u!114 &1459533837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60073,10 +60107,11 @@ MonoBehaviour:
     sentences:
     - "Ol\xE1 senhor, tenha um bom dia."
     options: []
+    hasGivedPoints: 0
+    pointsToGive: 0
   dialogueManager: {fileID: 1301513593}
   audioSource: {fileID: 1301513595}
-  hasGivedPoints: 0
-  pointsTeRecieve: 0
+  ppPoints: {fileID: 0}
 --- !u!114 &1546185369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63888,15 +63923,20 @@ MonoBehaviour:
         name: 
         sentences: []
         options: []
+        hasGivedPoints: 0
+        pointsToGive: 0
     - responseText: "N\xE3o."
       nextDialogue:
         name: 
         sentences: []
         options: []
+        hasGivedPoints: 0
+        pointsToGive: 0
+    hasGivedPoints: 0
+    pointsToGive: 0
   dialogueManager: {fileID: 1301513593}
   audioSource: {fileID: 1301513595}
-  hasGivedPoints: 0
-  pointsTeRecieve: 0
+  ppPoints: {fileID: 0}
 --- !u!114 &1666517079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64919,10 +64959,11 @@ MonoBehaviour:
     sentences:
     - Bom dia, boa tarde e boa noite para o senhor, Seu Francisco.
     options: []
+    hasGivedPoints: 0
+    pointsToGive: 0
   dialogueManager: {fileID: 1301513593}
   audioSource: {fileID: 1301513595}
-  hasGivedPoints: 0
-  pointsTeRecieve: 0
+  ppPoints: {fileID: 0}
 --- !u!114 &1703319989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68405,10 +68446,11 @@ MonoBehaviour:
     sentences:
     - "Que Deus esteja com voc\xEA!"
     options: []
+    hasGivedPoints: 0
+    pointsToGive: 0
   dialogueManager: {fileID: 1301513593}
   audioSource: {fileID: 1301513595}
-  hasGivedPoints: 0
-  pointsTeRecieve: 0
+  ppPoints: {fileID: 0}
 --- !u!114 &1802047655
 MonoBehaviour:
   m_ObjectHideFlags: 0

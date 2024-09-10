@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences; // Fila de frases do diálogo atual
     private Dialogue currentDialogue; // Referência ao diálogo atual
+    private DialogueTrigger currentTrigger; // Adicionando uma referência ao DialogueTrigger
 
     [HideInInspector] public bool hasTriggered;
 
@@ -24,11 +25,12 @@ public class DialogueManager : MonoBehaviour
     }
 
     // Método para iniciar o diálogo
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue, DialogueTrigger trigger)
     {
         hasTriggered = true;
 
         currentDialogue = dialogue;
+        currentTrigger = trigger; // Armazena a referência ao DialogueTrigger
         nameText.SetText(currentDialogue.name);
         dialoguePanel.SetActive(true);
         sentences.Clear();
@@ -95,7 +97,7 @@ public class DialogueManager : MonoBehaviour
         DialogueOption selectedOption = currentDialogue.options[optionIndex];
         if (selectedOption.nextDialogue != null)
         {
-            StartDialogue(selectedOption.nextDialogue);
+            StartDialogue(selectedOption.nextDialogue, currentTrigger);
         }
         else
         {
@@ -115,7 +117,7 @@ public class DialogueManager : MonoBehaviour
     // Método para encerrar o diálogo
     void EndDialogue()
     {
-        //DialogueTrigger.DialogueGivePoints();
+        currentTrigger.DialogueGivePoints(); // Use a referência ao DialogueTrigger armazenada
 
         hasTriggered = false;
 

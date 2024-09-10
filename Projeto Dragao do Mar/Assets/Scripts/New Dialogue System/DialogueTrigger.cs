@@ -5,14 +5,12 @@ public class DialogueTrigger : InteractableObject
     public Dialogue dialogue; // Referência ao diálogo deste NPC
     public DialogueManager dialogueManager; // Referência ao DialogueManager
     public AudioSource audioSource;
-    public bool hasGivedPoints;
     
-    PoliticalPoints ppPoints;
-    public int pointsTeRecieve;
+    public PoliticalPoints ppPoints;
 
     private void Start()
     {
-        print(hasGivedPoints);
+        print(dialogue.hasGivedPoints);
         ppPoints = FindObjectOfType<PoliticalPoints>();
     }
     protected override void Interact()
@@ -24,18 +22,18 @@ public class DialogueTrigger : InteractableObject
     }
     public void TriggerDialogue()
     {
-        dialogueManager.StartDialogue(dialogue);
+        dialogueManager.StartDialogue(dialogue, this); // Passa o próprio DialogueTrigger como parâmetro
     }
     public void DialogueGivePoints()
     {
-        if(hasGivedPoints == false) 
+        if(dialogue.hasGivedPoints == false) 
         {
-            PoliticalPoints.OnNPCInteraction(1);
+            PoliticalPoints.OnNPCInteraction(dialogue.pointsToGive);
+            dialogue.hasGivedPoints = true;
         }
         else
         {
             return;
         }
     }
-    
 }
