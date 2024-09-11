@@ -19,40 +19,54 @@ public class Lever : InteractableObject
     {
         doorController = FindObjectOfType<DoorController>();
         anim = GetComponent<Animator>();
+
+        // Randomize the initial state of the lever
+        RandomizeLeverState();
     }
 
-    public void Update()
+    private void RandomizeLeverState()
     {
-        switch (mode)
-        {
-            case LeverMode.Down:
-                isDown = true;
-                anim.SetBool("isDown", isDown);
-                break;
-
-            case LeverMode.Up:
-                isDown = false;
-                anim.SetBool("isDown", isDown);
-                break;
-        }
-    }
-
-    void SetleverMode()
-    {
-        if (isDown)
+        // Randomly set the lever to either Down or Up
+        if (Random.Range(0, 2) == 0) // Generates either 0 or 1
         {
             mode = LeverMode.Down;
+            isDown = true;
         }
         else
         {
             mode = LeverMode.Up;
+            isDown = false;
+        }
+
+        // Update the animation and state accordingly
+        UpdateLeverState();
+    }
+
+    // Update the animation and state based on the mode
+    private void UpdateLeverState()
+    {
+        // Sync the animator and the lever state
+        anim.SetBool("isDown", isDown);
+    }
+
+    void SetLeverMode()
+    {
+        if (isDown)
+        {
+            mode = LeverMode.Down;
+            isDown = true;
+        }
+        else
+        {
+            mode = LeverMode.Up;
+            isDown = false;
         }
     }
     protected override void Interact()
     {
         isDown = !isDown;
         isActivated = !isActivated;
-        SetleverMode();
+        SetLeverMode();
         // Call the method in DoorController to check if the puzzle is solved
         doorController.CheckCode();
     }
