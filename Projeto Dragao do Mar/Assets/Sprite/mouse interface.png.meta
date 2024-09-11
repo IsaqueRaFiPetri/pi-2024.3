@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 63255e2316943cd489a0422053447c93
+guid: 517728723d357d04d8ac938edab3fd9f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -44,10 +44,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -67,7 +67,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -105,22 +105,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Titulo_0
+      name: mouse interface_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 370
-        width: 578
-        height: 120
+        x: 95
+        y: 64
+        width: 109
+        height: 163
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09aea9c1d9284cf49b9bd9f2e67b2052
-      internalID: -647478658
+      spriteID: 3d0d2a168727c814cbf3485ef0f44dc8
+      internalID: 886323900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mouse interface_3
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 64
+        width: 109
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a3de736a5590274496a9a1bc87ce135
+      internalID: 1484173351
       vertices: []
       indices: 
       edges: []
@@ -128,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a00b80b7c131fc441846e751130cf150
+    spriteID: ba4a2503f5806354b8d3da45b5b46a38
     internalID: 0
     vertices: []
     indices: 
@@ -136,7 +157,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Titulo_0: -647478658
+      mouse interface_6: -1767419596
+      mouse interface_1: 82661150
+      mouse interface_3: 1484173351
+      mouse interface_5: -1289712200
+      mouse interface_7: 1384263509
+      mouse interface_4: -487555441
+      mouse interface_0: 886323900
+      mouse interface_2: 101734917
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
