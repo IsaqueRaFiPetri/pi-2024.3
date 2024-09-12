@@ -37,7 +37,6 @@ public class Lever : InteractableObject
             mode = LeverMode.Up;
             isDown = false;
         }
-
         // Update the animation and state accordingly
         UpdateLeverState();
     }
@@ -67,8 +66,10 @@ public class Lever : InteractableObject
         isDown = !isDown;
         isActivated = !isActivated;
         SetLeverMode();
+        UpdateLeverState();
         // Call the method in DoorController to check if the puzzle is solved
         doorController.CheckCode();
+
     }
 }
 //https://www.youtube.com/watch?v=UEP6DdCbaK8
