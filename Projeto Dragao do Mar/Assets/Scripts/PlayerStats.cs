@@ -44,7 +44,11 @@ public class PlayerStats : MonoBehaviour
                 PlayerInteraction.Instance.enabled = false;
                 break;
         }
+        PauseControl();
+    }
 
+    public void PauseControl()
+    {
         if (Input.GetButtonDown("Cancel"))
         {
             if (Time.timeScale == 1)
@@ -60,9 +64,7 @@ public class PlayerStats : MonoBehaviour
                 OnUnpause.Invoke();
             }
         }
-        
     }
-
     public static void GainPoints(int politcPoints)
     {
         politicalPoints += politcPoints;

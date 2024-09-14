@@ -29,13 +29,14 @@ public class NpcFunctions : MonoBehaviour
     {
         switch (npc)
         {
-            case NpcState.Break: //modod de aguardo
+            case NpcState.Break: //modo de aguardo
                 break;
             case NpcState.Walking:
                 if (agent.stoppingDistance >= agent.remainingDistance)
                 { //se estiver chegando ao destino, espere
                     SetNpcState(NpcState.Break);
                 }
+                agent.isStopped = false;
                 break;
             case NpcState.DoingSomething:
                 break;
@@ -73,7 +74,7 @@ public class NpcFunctions : MonoBehaviour
     }
     IEnumerator GiveaBreak()
     {
-        yield return new WaitForSeconds(2); //tempo de espera
+        yield return new WaitForSeconds(4); //tempo de espera
 
         SetDestiny();   //setar um novo destino e começar a ir
     }
@@ -97,7 +98,7 @@ public class NpcFunctions : MonoBehaviour
             }
 
             // Aqui você pode adicionar lógica para o diálogo (por exemplo, exibir texto na tela)
-            yield return new WaitForSeconds(5);  // Simulando a duração do diálogo
+            yield return new WaitForSeconds(10);  // Simulando a duração do diálogo
 
             // Após o diálogo, permita que o NPC volte a andar
             agent.isStopped = false;

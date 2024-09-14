@@ -24,14 +24,13 @@ public class PlayerInteraction : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 hit.collider.SendMessage("Interact", SendMessageOptions.DontRequireReceiver);
-                //print(hit.collider.name);
             }
+            
             if(hit.collider.CompareTag("Interagivel"))
-            interactionInstruction.SetActive(true);
+                interactionInstruction.SetActive(true);
+            else
+                interactionInstruction.SetActive(false);
         }
-        else
-        {
-            interactionInstruction.SetActive(false);
-        }
+        
     }
 }

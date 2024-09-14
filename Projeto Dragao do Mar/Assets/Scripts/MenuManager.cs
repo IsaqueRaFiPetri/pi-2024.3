@@ -14,17 +14,6 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene(tp);
     }
-
-    public void Creditos()
-    {
-        painelCred.SetActive(true);
-    }
-
-    public void FecharCreditos()
-    {
-        painelCred.SetActive(false);
-    }
-
     public void SairJogo()
     {
         Debug.Log("Sair do jogo");
