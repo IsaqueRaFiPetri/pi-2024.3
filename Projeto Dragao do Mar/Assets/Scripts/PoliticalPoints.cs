@@ -15,6 +15,11 @@ public class PoliticalPoints : MonoBehaviour //Este vai num vazio
     public void OnQuestCompleted(int points)
     {
         PlayerStats.GainPoints(points);  // Por exemplo, o jogador ganha 20 pontos ao completar uma quest
-
+    }
+    
+    // Exemplo de método para quando o jogador completar um puzzle
+    public void OnPuzzlerCompleted(int points)
+    {
+        PlayerStats.GainPoints(points);  // Por exemplo, o jogador ganha 20 pontos ao completar uma quest
     }
 }
