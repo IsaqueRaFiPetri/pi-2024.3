@@ -181,27 +181,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Beatriz Ramirez dos Santos
-
-    Louise  Scheibler Neckel
-
-    Isaque Ramos
-    Figueiredo Petri
-
-
-
-
-
-
-    ItsTheGoodstuff
-
-    SieuAmThanh
-
-    Kolombooo
-
-
-
-    JeCase'
+  m_text: "Beatriz Ramirez dos Santos\nLouise  Scheibler Neckel\nIsaque Ramos Figueiredo
+    Petri\n\n\n\n\n\nItsTheGoodstuff\nSieuAmThanh\nKolombooo\n\n\nJeCase\n\n\n\nA
+    dog's life software\nCumbobo\nCjmitchell\nMcmanusdundee\r\nNoozo\nMarkusSchwalb\nGogiart\nReposit\xF3rio
+    da Capoeira Regional\nMika.mapassion.83\nFarkhad\nSeth Santos\nYanez Designs\nFourthGreen\nNoodlePoodle\nTraianDumbrava\r\nSam
+    Maughfling\nBlindFold Games\nStyloo\nCraftpix.net\nAmbientCG\nPixabay\nPexels\nUnsplash\nFiverr\nErxer1\nZologo\nNikin\nSam-maughfling\r\nElegantcrow\r\nRGS_Dev\r\nFourthGreen\nFarik2311"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -829,7 +813,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -835.70996, y: 443.16003}
+  m_AnchoredPosition: {x: -835.7099, y: 443.16003}
   m_SizeDelta: {x: 198.02, y: 119.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &876863811
@@ -1560,7 +1544,9 @@ MonoBehaviour:
 
     First Player Controller:
 
-'
+
+
+    Art:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
