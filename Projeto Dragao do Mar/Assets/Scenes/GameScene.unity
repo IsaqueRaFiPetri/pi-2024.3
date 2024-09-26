@@ -18193,11 +18193,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 135256694995936858, guid: d3f87f114f86a3b4f88996e8d2e99fd8, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 372328756910952570, guid: d3f87f114f86a3b4f88996e8d2e99fd8, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 463893720210880955, guid: d3f87f114f86a3b4f88996e8d2e99fd8, type: 3}
       propertyPath: m_Enabled
@@ -18322,7 +18322,7 @@ MonoBehaviour:
     idx: 0
     list: []
   - type: head
-    idx: 1
+    idx: 0
     list:
     - {fileID: 559446261}
     - {fileID: 559446258}
@@ -48329,7 +48329,6 @@ GameObject:
   - component: {fileID: 1322965759}
   - component: {fileID: 1322965758}
   - component: {fileID: 1322965757}
-  - component: {fileID: 1322965756}
   - component: {fileID: 1322965760}
   - component: {fileID: 1322965762}
   - component: {fileID: 1322965764}
@@ -48340,20 +48339,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &1322965756
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1322965755}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 3.5289154
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.7644591, z: 0}
 --- !u!23 &1322965757
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -48466,7 +48451,7 @@ MonoBehaviour:
     sentences:
     - "Ol\xE1 sinh\xF4, como foi o seu sono?"
     options:
-    - responseText: "Foi bom de mais s\xF4."
+    - responseText: "Foi bom demais s\xF4."
       nextDialogue:
         name: Marinheiro
         sentences:
@@ -48477,7 +48462,7 @@ MonoBehaviour:
           nextDialogue:
             name: Marinheiro
             sentences:
-            - Que bom!
+            - "Que bom sinh\xF4, tenha um \xF3timo trabalho."
             options: []
             hasGivedPoints: 0
             pointsToGive: 0
@@ -48487,13 +48472,17 @@ MonoBehaviour:
             sentences:
             - Pela barba de Dom Pedro II, achei que sabias de tua tarefa.
             - "Sua miss\xE3o \xE9 ganhar pontos pol\xEDticos o suficiente para ajudar
-              na aboli\xE7\xE3o da escravid\xE3o do Cear\xE1 o quanto antes.\r"
-            - "Para isso, voc\xEA necessita se locomover. Para se locomover, voc\xEA
-              pode usar as setinhas ou as teclas <b>W, A, S e D<b>. Voc\xEA pode
-              pular tamb\xE9m, usando a <b>barra de espa\xE7o<b>, se agachar usando
-              a tecla <b>Ctrl<b> e correr pressionando a tecla <b>Shift + uma das
-              teclas de movimenta\xE7\xE3o<b>.\r"
-            - "Boa sorte Sinh\xF4."
+              na aboli\xE7\xE3o da escravid\xE3o do Cear\xE1 o quanto antes, sinh\xF4!!."
+            - "Para isso, voc\xEA necessitar\xE1 se locomover. Voc\xEA pode usar
+              as setinhas ou as teclas W, A, S e D para se locomover.\r"
+            - "Voc\xEA pode pular e correr tamb\xE9m, utilize a barra de espa\xE7o
+              para pular e pressione Shift enquanto se locomove para correr."
+            - "Voc\xEA tamb\xE9m pode interagir com objetos no mapa, por\xE9m n\xE3o
+              ser\xE3o todos. Ir\xE1 aparecer uma imagem na tela mostrando para voc\xEA
+              como interagir.\r"
+            - "Voc\xEA pode pausar o jogo tamb\xE9m, apenas clicando na tecla Esc,
+              e para voltar para o jogo, basta clicar nela novamente.\nnovamente."
+            - "Boa sorte sinh\xF4."
             options: []
             hasGivedPoints: 0
             pointsToGive: 0
@@ -48510,7 +48499,7 @@ MonoBehaviour:
           nextDialogue:
             name: Marinheiro
             sentences:
-            - Que bom!
+            - "Que bom sinh\xF4, tenha um \xF3timo trabalho."
             options: []
             hasGivedPoints: 0
             pointsToGive: 0
@@ -48520,13 +48509,17 @@ MonoBehaviour:
             sentences:
             - Pela barba de Dom Pedro II, achei que sabias de tua tarefa.
             - "Sua miss\xE3o \xE9 ganhar pontos pol\xEDticos o suficiente para ajudar
-              na aboli\xE7\xE3o da escravid\xE3o do Cear\xE1 o quanto antes.\r"
-            - "Para isso, voc\xEA necessita se locomover. Para se locomover, voc\xEA
-              pode usar as setinhas ou as teclas <b>W, A, S e D<b>. Voc\xEA pode
-              pular tamb\xE9m, usando a <b>barra de espa\xE7o<b>, se agachar usando
-              a tecla <b>Ctrl<b> e correr pressionando a tecla <b>Shift + uma das
-              teclas de movimenta\xE7\xE3o<b>.\r"
-            - "Boa sorte Sinh\xF4."
+              na aboli\xE7\xE3o da escravid\xE3o do Cear\xE1 o quanto antes, sinh\xF4!!."
+            - "Para isso, voc\xEA necessitar\xE1 se locomover. Voc\xEA pode usar
+              as setinhas ou as teclas W, A, S e D para se locomover.\r"
+            - "Voc\xEA pode pular e correr tamb\xE9m, utilize a barra de espa\xE7o
+              para pular e pressione Shift enquanto se locomove para correr."
+            - "Voc\xEA tamb\xE9m pode interagir com objetos no mapa, por\xE9m n\xE3o
+              ser\xE3o todos. Ir\xE1 aparecer uma imagem na tela mostrando para voc\xEA
+              como interagir.\r"
+            - "Voc\xEA pode pausar o jogo tamb\xE9m, apenas clicando na tecla Esc,
+              e para voltar para o jogo, basta clicar nela novamente.\nnovamente."
+            - "Boa sorte sinh\xF4."
             options: []
             hasGivedPoints: 0
             pointsToGive: 0
@@ -66213,6 +66206,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 852444355}
     m_Modifications:
+    - target: {fileID: 1994488891, guid: 0da600d002dc6404693c3b74e0265a3c, type: 3}
+      propertyPath: skin.color.b
+      value: 0.24313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1994488891, guid: 0da600d002dc6404693c3b74e0265a3c, type: 3}
+      propertyPath: skin.color.g
+      value: 0.28235295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1994488891, guid: 0da600d002dc6404693c3b74e0265a3c, type: 3}
+      propertyPath: skin.color.r
+      value: 0.41960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 1994488891, guid: 0da600d002dc6404693c3b74e0265a3c, type: 3}
+      propertyPath: duplicateMaterial
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1994488891, guid: 0da600d002dc6404693c3b74e0265a3c, type: 3}
       propertyPath: material.instance
       value: 
@@ -96529,7 +96538,7 @@ MonoBehaviour:
   loaded: 1
   tooglehelmet: 0
   skin:
-    color: {r: 0.38235295, g: 0.17254902, b: 0.105882354, a: 1}
+    color: {r: 0.38431373, g: 0.17254902, b: 0.105882354, a: 1}
     smoothness: 0.154
   eyes:
     color: {r: 0.00024509805, g: 0.0004901961, b: 0, a: 1}
