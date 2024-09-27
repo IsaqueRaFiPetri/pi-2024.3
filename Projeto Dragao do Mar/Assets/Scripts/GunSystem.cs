@@ -39,7 +39,7 @@ public class GunSystem : MonoBehaviour
         MyInput();
 
         //SetText
-        text.SetText(bulletsLeft + " / " + magazineSize);
+        //text.SetText(bulletsLeft + " / " + magazineSize);
 
         if (reloading == true)
         {
@@ -54,11 +54,11 @@ public class GunSystem : MonoBehaviour
     {
         if (allowButtonHolds)
         {
-            shooting = Input.GetButton("Fire1");
+            shooting = Input.GetButton("Fire3");
         }
         else
         {
-            shooting = Input.GetButtonDown("Fire1");
+            shooting = Input.GetButtonDown("Fire3");
         }
         if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading)
         {
@@ -88,10 +88,10 @@ public class GunSystem : MonoBehaviour
         {
             Debug.Log(rayHit.collider.name);
 
-            if (rayHit.collider.CompareTag("Enemy"))
+            if (rayHit.collider.CompareTag("Alvo"))
             {
                 print("acertou");
-                rayHit.collider.GetComponent<Target>();
+                rayHit.collider.GetComponent<Target>().TakeDamage(damage);
             }
         }
 
@@ -102,7 +102,7 @@ public class GunSystem : MonoBehaviour
         float angle = Vector3.Angle(rayHit.normal, Vector3.forward);
         Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, angle, 0));
         Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
-        shootingAudio.Play();
+        //shootingAudio.Play();
 
         bulletsLeft--;
         bulletsShot--;
