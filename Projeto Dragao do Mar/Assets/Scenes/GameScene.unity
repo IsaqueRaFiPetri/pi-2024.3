@@ -1948,7 +1948,7 @@ GameObject:
   - component: {fileID: 49892841}
   - component: {fileID: 49892842}
   - component: {fileID: 49892843}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BeerBottle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1995,8 +1995,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 4.3657837, z: 1}
+  m_Center: {x: 0, y: 1.9333572, z: 0}
 --- !u!1 &50071870
 GameObject:
   m_ObjectHideFlags: 0
@@ -13592,7 +13592,7 @@ GameObject:
   - component: {fileID: 401082703}
   - component: {fileID: 401082704}
   - component: {fileID: 401082705}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BeerBottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13639,8 +13639,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 4.3614273, z: 1}
+  m_Center: {x: 0, y: 1.9015007, z: 0}
 --- !u!4 &401095542 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3574150476469722602, guid: 8f3dc99490e1dbf4d9b2514dab0f7226, type: 3}
@@ -14917,15 +14917,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.53
+      value: -328.6
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.48
+      value: -84.3
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 431.73
+      value: 684.3
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16495,9 +16495,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6078143117321024468, guid: f6cf33fec318c7c49bb989b5fccec539, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -1320662467185567709, guid: f6cf33fec318c7c49bb989b5fccec539, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f6cf33fec318c7c49bb989b5fccec539, type: 3}
       propertyPath: m_Name
       value: bottle_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f6cf33fec318c7c49bb989b5fccec539, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2220508748551591814, guid: f6cf33fec318c7c49bb989b5fccec539, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -36987,9 +36999,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6078143117321024468, guid: f6cf33fec318c7c49bb989b5fccec539, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -1320662467185567709, guid: f6cf33fec318c7c49bb989b5fccec539, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f6cf33fec318c7c49bb989b5fccec539, type: 3}
       propertyPath: m_Name
       value: bottle_low
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f6cf33fec318c7c49bb989b5fccec539, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2220508748551591814, guid: f6cf33fec318c7c49bb989b5fccec539, type: 3}
       propertyPath: m_Materials.Array.data[0]
