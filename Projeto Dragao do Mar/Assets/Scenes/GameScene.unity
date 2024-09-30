@@ -1950,7 +1950,7 @@ GameObject:
   - component: {fileID: 49892843}
   m_Layer: 7
   m_Name: BeerBottle (1)
-  m_TagString: Untagged
+  m_TagString: Alvo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1983,7 +1983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee6cedb72e9c0f40adbade1171c4a5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 1
 --- !u!65 &49892843
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13594,7 +13594,7 @@ GameObject:
   - component: {fileID: 401082705}
   m_Layer: 7
   m_Name: BeerBottle
-  m_TagString: Untagged
+  m_TagString: Alvo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13627,7 +13627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee6cedb72e9c0f40adbade1171c4a5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 1
 --- !u!65 &401082705
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14907,6 +14907,10 @@ PrefabInstance:
       propertyPath: bulletHoleGraphic
       value: 
       objectReference: {fileID: 1000010844420130, guid: 4edabb1c0dde62743b137378c7d22980, type: 3}
+    - target: {fileID: 1719961069, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: timeBetweenShooting
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 1087707381990797, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
