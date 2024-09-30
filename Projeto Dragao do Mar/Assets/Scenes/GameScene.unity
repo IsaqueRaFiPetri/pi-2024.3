@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.12077082, g: 0.18644437, b: 0.33524808, a: 1}
+  m_IndirectSpecularColor: {r: 0.12073143, g: 0.18645728, b: 0.33538952, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1947,6 +1947,7 @@ GameObject:
   m_Component:
   - component: {fileID: 49892841}
   - component: {fileID: 49892842}
+  - component: {fileID: 49892843}
   m_Layer: 0
   m_Name: BeerBottle (1)
   m_TagString: Untagged
@@ -1983,6 +1984,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
+--- !u!65 &49892843
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49892840}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &50071870
 GameObject:
   m_ObjectHideFlags: 0
@@ -4401,10 +4415,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 126991804}
-  - component: {fileID: 126991803}
-  - component: {fileID: 126991802}
-  - component: {fileID: 126991801}
-  - component: {fileID: 126991800}
   m_Layer: 0
   m_Name: NPC_Menina
   m_TagString: Interagivel
@@ -4412,89 +4422,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &126991800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 126991799}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 195a5a1933d72654dbf6bd32f6d1d619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Juliana
-    sentences:
-    - "Se almenos j\xE1 existicem celulares..."
-    options: []
-    hasGivedPoints: 0
-    pointsToGive: 0
-  dialogueManager: {fileID: 1301513593}
-  audioSource: {fileID: 1301513595}
-  ppPoints: {fileID: 0}
---- !u!114 &126991801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 126991799}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04ab8b460f070146ad49c1b1c7ddc7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npc: 0
-  OnBreak:
-    m_PersistentCalls:
-      m_Calls: []
-  OnWalking:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDoing:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  playerTransform: {fileID: 1141673857}
---- !u!65 &126991802
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 126991799}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.6380394, z: 0.3482113}
-  m_Center: {x: 0, y: 0.8668531, z: 0.058325768}
---- !u!195 &126991803
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 126991799}
-  m_Enabled: 0
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &126991804
 Transform:
   m_ObjectHideFlags: 0
@@ -7032,10 +6959,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 187079833}
-  - component: {fileID: 187079832}
-  - component: {fileID: 187079831}
-  - component: {fileID: 187079830}
-  - component: {fileID: 187079829}
   m_Layer: 0
   m_Name: NPC_Menina (1)
   m_TagString: Interagivel
@@ -7043,89 +6966,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &187079829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187079828}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 195a5a1933d72654dbf6bd32f6d1d619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Nicole
-    sentences:
-    - "Bom dia sinh\xF4..."
-    options: []
-    hasGivedPoints: 0
-    pointsToGive: 0
-  dialogueManager: {fileID: 1301513593}
-  audioSource: {fileID: 1301513595}
-  ppPoints: {fileID: 0}
---- !u!114 &187079830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187079828}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04ab8b460f070146ad49c1b1c7ddc7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npc: 0
-  OnBreak:
-    m_PersistentCalls:
-      m_Calls: []
-  OnWalking:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDoing:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  playerTransform: {fileID: 1141673857}
---- !u!65 &187079831
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187079828}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.6380394, z: 0.3482113}
-  m_Center: {x: 0, y: 0.8668531, z: 0.058325768}
---- !u!195 &187079832
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187079828}
-  m_Enabled: 0
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &187079833
 Transform:
   m_ObjectHideFlags: 0
@@ -8144,10 +7984,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 207966293}
-  - component: {fileID: 207966294}
-  - component: {fileID: 207966295}
-  - component: {fileID: 207966296}
-  - component: {fileID: 207966297}
   m_Layer: 0
   m_Name: NPC_Menino
   m_TagString: Interagivel
@@ -8171,123 +8007,6 @@ Transform:
   m_Father: {fileID: 1371088335}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!195 &207966294
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 207966292}
-  m_Enabled: 0
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!65 &207966295
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 207966292}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.6380394, z: 0.3482113}
-  m_Center: {x: 0, y: 0.8668531, z: 0.058325768}
---- !u!114 &207966296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 207966292}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04ab8b460f070146ad49c1b1c7ddc7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npc: 0
-  OnBreak:
-    m_PersistentCalls:
-      m_Calls: []
-  OnWalking:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDoing:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  playerTransform: {fileID: 1141673857}
---- !u!114 &207966297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 207966292}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 195a5a1933d72654dbf6bd32f6d1d619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Rodrigo
-    sentences:
-    - "Ol\xE1 senhor. Como vai?"
-    options:
-    - responseText: "Bem, e voc\xEA pequenino?"
-      nextDialogue:
-        name: Rodrigo
-        sentences:
-        - Vou bem.
-        - "O sinh\xF4 parece ser algu\xE9m importante."
-        - "Tchau sinh\xF4."
-        options:
-        - responseText: Tchau baixinho!
-          nextDialogue:
-            name: 
-            sentences: []
-            options: []
-            hasGivedPoints: 0
-            pointsToGive: 0
-        hasGivedPoints: 0
-        pointsToGive: 0
-    - responseText: "N\xE3o muito bem, e voc\xEA baixinho?"
-      nextDialogue:
-        name: Rodrigo
-        sentences:
-        - Vou bem.
-        - "O sinh\xF4 parece ser algu\xE9m importante."
-        - Tchau senhor!
-        options:
-        - responseText: Tchau pequenino!
-          nextDialogue:
-            name: 
-            sentences: []
-            options: []
-            hasGivedPoints: 0
-            pointsToGive: 0
-        hasGivedPoints: 0
-        pointsToGive: 0
-    hasGivedPoints: 0
-    pointsToGive: 0
-  dialogueManager: {fileID: 1301513593}
-  audioSource: {fileID: 750493109}
-  ppPoints: {fileID: 0}
 --- !u!1 &208013410
 GameObject:
   m_ObjectHideFlags: 0
@@ -13872,6 +13591,7 @@ GameObject:
   m_Component:
   - component: {fileID: 401082703}
   - component: {fileID: 401082704}
+  - component: {fileID: 401082705}
   m_Layer: 0
   m_Name: BeerBottle
   m_TagString: Untagged
@@ -13908,6 +13628,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
+--- !u!65 &401082705
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401082702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &401095542 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3574150476469722602, guid: 8f3dc99490e1dbf4d9b2514dab0f7226, type: 3}
@@ -22555,10 +22288,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 677992818}
-  - component: {fileID: 677992817}
-  - component: {fileID: 677992816}
-  - component: {fileID: 677992815}
-  - component: {fileID: 677992814}
   m_Layer: 0
   m_Name: NPC_SeuLuis
   m_TagString: Interagivel
@@ -22566,103 +22295,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &677992814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677992813}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 195a5a1933d72654dbf6bd32f6d1d619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: "Seu Lu\xEDs"
-    sentences:
-    - "Como vai indo o trabalho seu pr\xE1tico-mor?"
-    options:
-    - responseText: O de sempre!
-      nextDialogue:
-        name: 
-        sentences: []
-        options: []
-        hasGivedPoints: 0
-        pointsToGive: 0
-    - responseText: Tem estado meio ruim.
-      nextDialogue:
-        name: 
-        sentences: []
-        options: []
-        hasGivedPoints: 0
-        pointsToGive: 0
-    hasGivedPoints: 0
-    pointsToGive: 0
-  dialogueManager: {fileID: 1301513593}
-  audioSource: {fileID: 1301513595}
-  ppPoints: {fileID: 0}
---- !u!114 &677992815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677992813}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04ab8b460f070146ad49c1b1c7ddc7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npc: 0
-  OnBreak:
-    m_PersistentCalls:
-      m_Calls: []
-  OnWalking:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDoing:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  playerTransform: {fileID: 1141673857}
---- !u!65 &677992816
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677992813}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.6380394, z: 0.3482113}
-  m_Center: {x: 0, y: 0.8668531, z: 0.058325768}
---- !u!195 &677992817
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677992813}
-  m_Enabled: 0
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &677992818
 Transform:
   m_ObjectHideFlags: 0
@@ -26698,10 +26330,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 852444355}
-  - component: {fileID: 852444354}
-  - component: {fileID: 852444353}
-  - component: {fileID: 852444352}
-  - component: {fileID: 852444351}
   m_Layer: 0
   m_Name: NPC_Menino (3)
   m_TagString: Interagivel
@@ -26709,89 +26337,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &852444351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852444350}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 195a5a1933d72654dbf6bd32f6d1d619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Roberto
-    sentences:
-    - Bom dia...
-    options: []
-    hasGivedPoints: 0
-    pointsToGive: 0
-  dialogueManager: {fileID: 1301513593}
-  audioSource: {fileID: 1301513595}
-  ppPoints: {fileID: 0}
---- !u!114 &852444352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852444350}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04ab8b460f070146ad49c1b1c7ddc7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npc: 0
-  OnBreak:
-    m_PersistentCalls:
-      m_Calls: []
-  OnWalking:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDoing:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  playerTransform: {fileID: 1141673857}
---- !u!65 &852444353
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852444350}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.6380394, z: 0.3482113}
-  m_Center: {x: 0, y: 0.8668531, z: 0.058325768}
---- !u!195 &852444354
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852444350}
-  m_Enabled: 0
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &852444355
 Transform:
   m_ObjectHideFlags: 0
@@ -32030,6 +31575,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: fb3b7bf16a940464fa1451bceb44ebbe, type: 2}
+    - target: {fileID: 5126934366854487569, guid: 0da600d002dc6404693c3b74e0265a3c, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5136403045798493160, guid: 0da600d002dc6404693c3b74e0265a3c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.017212799
@@ -42844,10 +42393,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1215616837}
-  - component: {fileID: 1215616836}
-  - component: {fileID: 1215616835}
-  - component: {fileID: 1215616834}
-  - component: {fileID: 1215616833}
   m_Layer: 0
   m_Name: NPC_Menino (8)
   m_TagString: Interagivel
@@ -42855,89 +42400,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1215616833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215616832}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 195a5a1933d72654dbf6bd32f6d1d619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Ricardo
-    sentences:
-    - "Os portugu\xEAses vieram para c\xE1 e saquearam tudo!!"
-    options: []
-    hasGivedPoints: 0
-    pointsToGive: 0
-  dialogueManager: {fileID: 1301513593}
-  audioSource: {fileID: 1301513595}
-  ppPoints: {fileID: 0}
---- !u!114 &1215616834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215616832}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04ab8b460f070146ad49c1b1c7ddc7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npc: 0
-  OnBreak:
-    m_PersistentCalls:
-      m_Calls: []
-  OnWalking:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDoing:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  playerTransform: {fileID: 1141673857}
---- !u!65 &1215616835
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215616832}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.6380394, z: 0.3482113}
-  m_Center: {x: 0, y: 0.8668531, z: 0.058325768}
---- !u!195 &1215616836
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215616832}
-  m_Enabled: 0
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &1215616837
 Transform:
   m_ObjectHideFlags: 0
@@ -46258,10 +45720,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1316576395}
-  - component: {fileID: 1316576394}
-  - component: {fileID: 1316576393}
-  - component: {fileID: 1316576392}
-  - component: {fileID: 1316576391}
   m_Layer: 0
   m_Name: NPC_Mulher
   m_TagString: Interagivel
@@ -46269,89 +45727,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1316576391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316576390}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 195a5a1933d72654dbf6bd32f6d1d619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Dona Soares
-    sentences:
-    - "N\xE3o leia nada de que o Ricardo fale, ele \xE9 s\xF3 uma crian\xE7a"
-    options: []
-    hasGivedPoints: 0
-    pointsToGive: 0
-  dialogueManager: {fileID: 1301513593}
-  audioSource: {fileID: 1301513595}
-  ppPoints: {fileID: 0}
---- !u!114 &1316576392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316576390}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04ab8b460f070146ad49c1b1c7ddc7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npc: 0
-  OnBreak:
-    m_PersistentCalls:
-      m_Calls: []
-  OnWalking:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDoing:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  playerTransform: {fileID: 1141673857}
---- !u!65 &1316576393
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316576390}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.6380394, z: 0.3482113}
-  m_Center: {x: 0, y: 0.8668531, z: 0.058325768}
---- !u!195 &1316576394
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316576390}
-  m_Enabled: 0
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &1316576395
 Transform:
   m_ObjectHideFlags: 0
@@ -47023,6 +46398,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: fb3b7bf16a940464fa1451bceb44ebbe, type: 2}
+    - target: {fileID: 5126934366854487569, guid: 0da600d002dc6404693c3b74e0265a3c, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5136403045798493160, guid: 0da600d002dc6404693c3b74e0265a3c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.017212799
@@ -52674,10 +52053,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1459533840}
-  - component: {fileID: 1459533839}
-  - component: {fileID: 1459533838}
-  - component: {fileID: 1459533837}
-  - component: {fileID: 1459533836}
   m_Layer: 0
   m_Name: NPC_Menino (11)
   m_TagString: Interagivel
@@ -52685,89 +52060,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1459533836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459533835}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 195a5a1933d72654dbf6bd32f6d1d619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: "Jo\xE3o"
-    sentences:
-    - "Como ser\xE1 que deve ser o ano de 2024?"
-    options: []
-    hasGivedPoints: 0
-    pointsToGive: 0
-  dialogueManager: {fileID: 1301513593}
-  audioSource: {fileID: 1301513595}
-  ppPoints: {fileID: 0}
---- !u!114 &1459533837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459533835}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04ab8b460f070146ad49c1b1c7ddc7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npc: 0
-  OnBreak:
-    m_PersistentCalls:
-      m_Calls: []
-  OnWalking:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDoing:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  playerTransform: {fileID: 1141673857}
---- !u!65 &1459533838
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459533835}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.6380394, z: 0.3482113}
-  m_Center: {x: 0, y: 0.8668531, z: 0.058325768}
---- !u!195 &1459533839
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459533835}
-  m_Enabled: 0
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 1
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &1459533840
 Transform:
   m_ObjectHideFlags: 0
@@ -55788,10 +55080,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1546185372}
-  - component: {fileID: 1546185371}
-  - component: {fileID: 1546185370}
-  - component: {fileID: 1546185369}
-  - component: {fileID: 1546185368}
   m_Layer: 0
   m_Name: NPC_Menina
   m_TagString: Interagivel
@@ -55799,89 +55087,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1546185368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1546185367}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 195a5a1933d72654dbf6bd32f6d1d619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Analuiza
-    sentences:
-    - "Ol\xE1 senhor, tenha um bom dia."
-    options: []
-    hasGivedPoints: 0
-    pointsToGive: 0
-  dialogueManager: {fileID: 1301513593}
-  audioSource: {fileID: 1301513595}
-  ppPoints: {fileID: 0}
---- !u!114 &1546185369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1546185367}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04ab8b460f070146ad49c1b1c7ddc7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npc: 0
-  OnBreak:
-    m_PersistentCalls:
-      m_Calls: []
-  OnWalking:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDoing:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  playerTransform: {fileID: 1141673857}
---- !u!65 &1546185370
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1546185367}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.6380394, z: 0.3482113}
-  m_Center: {x: 0, y: 0.8668531, z: 0.058325768}
---- !u!195 &1546185371
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1546185367}
-  m_Enabled: 0
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &1546185372
 Transform:
   m_ObjectHideFlags: 0
@@ -59364,10 +58569,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1666517082}
-  - component: {fileID: 1666517081}
-  - component: {fileID: 1666517080}
-  - component: {fileID: 1666517079}
-  - component: {fileID: 1666517078}
   m_Layer: 0
   m_Name: NPC_Mulher
   m_TagString: Interagivel
@@ -59375,103 +58576,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1666517078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666517077}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 195a5a1933d72654dbf6bd32f6d1d619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Aparecida
-    sentences:
-    - "Dia bom para uma caminhada, n\xE3o \xE9 sinh\xF4?"
-    options:
-    - responseText: Sim.
-      nextDialogue:
-        name: 
-        sentences: []
-        options: []
-        hasGivedPoints: 0
-        pointsToGive: 0
-    - responseText: "N\xE3o."
-      nextDialogue:
-        name: 
-        sentences: []
-        options: []
-        hasGivedPoints: 0
-        pointsToGive: 0
-    hasGivedPoints: 0
-    pointsToGive: 0
-  dialogueManager: {fileID: 1301513593}
-  audioSource: {fileID: 1301513595}
-  ppPoints: {fileID: 0}
---- !u!114 &1666517079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666517077}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04ab8b460f070146ad49c1b1c7ddc7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npc: 0
-  OnBreak:
-    m_PersistentCalls:
-      m_Calls: []
-  OnWalking:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDoing:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  playerTransform: {fileID: 1141673857}
---- !u!65 &1666517080
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666517077}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.6380394, z: 0.3482113}
-  m_Center: {x: 0, y: 0.8668531, z: 0.058325768}
---- !u!195 &1666517081
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666517077}
-  m_Enabled: 0
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &1666517082
 Transform:
   m_ObjectHideFlags: 0
@@ -60400,10 +59504,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1703319992}
-  - component: {fileID: 1703319991}
-  - component: {fileID: 1703319990}
-  - component: {fileID: 1703319989}
-  - component: {fileID: 1703319988}
   m_Layer: 0
   m_Name: NPC_Mulher (1)
   m_TagString: Interagivel
@@ -60411,89 +59511,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1703319988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1703319987}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 195a5a1933d72654dbf6bd32f6d1d619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Juliana
-    sentences:
-    - Bom dia, boa tarde e boa noite para o senhor, Seu Francisco.
-    options: []
-    hasGivedPoints: 0
-    pointsToGive: 0
-  dialogueManager: {fileID: 1301513593}
-  audioSource: {fileID: 1301513595}
-  ppPoints: {fileID: 0}
---- !u!114 &1703319989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1703319987}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04ab8b460f070146ad49c1b1c7ddc7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npc: 0
-  OnBreak:
-    m_PersistentCalls:
-      m_Calls: []
-  OnWalking:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDoing:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  playerTransform: {fileID: 1141673857}
---- !u!65 &1703319990
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1703319987}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.6380394, z: 0.3482113}
-  m_Center: {x: 0, y: 0.8668531, z: 0.058325768}
---- !u!195 &1703319991
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1703319987}
-  m_Enabled: 0
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &1703319992
 Transform:
   m_ObjectHideFlags: 0
@@ -63693,10 +62710,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1802047658}
-  - component: {fileID: 1802047657}
-  - component: {fileID: 1802047656}
-  - component: {fileID: 1802047655}
-  - component: {fileID: 1802047654}
   m_Layer: 0
   m_Name: NPC_Padre
   m_TagString: Interagivel
@@ -63704,89 +62717,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1802047654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1802047653}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 195a5a1933d72654dbf6bd32f6d1d619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Padre
-    sentences:
-    - "Que Deus esteja com voc\xEA!"
-    options: []
-    hasGivedPoints: 0
-    pointsToGive: 0
-  dialogueManager: {fileID: 1301513593}
-  audioSource: {fileID: 1301513595}
-  ppPoints: {fileID: 0}
---- !u!114 &1802047655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1802047653}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04ab8b460f070146ad49c1b1c7ddc7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npc: 0
-  OnBreak:
-    m_PersistentCalls:
-      m_Calls: []
-  OnWalking:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDoing:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  playerTransform: {fileID: 1141673857}
---- !u!65 &1802047656
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1802047653}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.6380394, z: 0.3482113}
-  m_Center: {x: 0, y: 0.8668531, z: 0.058325768}
---- !u!195 &1802047657
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1802047653}
-  m_Enabled: 0
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &1802047658
 Transform:
   m_ObjectHideFlags: 0
