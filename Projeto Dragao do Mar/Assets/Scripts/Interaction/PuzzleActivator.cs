@@ -4,15 +4,10 @@ public class PuzzleActivator : InteractableObject
 {
     public GameObject player;
     public Transform targetPosition;
-    FirstPersonController controller;
+    public FirstPersonController controller;
 
     // Array or list to hold the objects that will shoot
     public GameObject[] objectsToShoot;
-
-    private void Start()
-    {
-        controller = GetComponent<FirstPersonController>();
-    }
 
     // Method that gets called when the player interacts with the activator
     protected override void Interact()
@@ -28,7 +23,7 @@ public class PuzzleActivator : InteractableObject
     {
         // Move the player to the target position
         player.transform.position = targetPosition.position;
-        controller.playerCanMove = true;
+        controller.playerCanMove = false;
     }
 
     void SummonObjects()
@@ -39,5 +34,10 @@ public class PuzzleActivator : InteractableObject
             // You can enable a shooting script, start an animation, etc.
             obj.SetActive(true); // Simple example of activating objects
         }
+    }
+
+    void PuzzleEnd()
+    {
+
     }
 }
