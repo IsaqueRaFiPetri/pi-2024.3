@@ -38,8 +38,7 @@ public class GunSystem : MonoBehaviour
     {
         MyInput();
 
-        //SetText
-        //text.SetText(bulletsLeft + " / " + magazineSize);
+        text.SetText(bulletsLeft + " / " + magazineSize);
 
         if (reloading == true)
         {

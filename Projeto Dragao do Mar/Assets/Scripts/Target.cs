@@ -13,10 +13,10 @@ public class Target : MonoBehaviour
         health -= damage;
         if (health < 0)
         {
+            KillerCount.KillCountUp();
             Destroy(gameObject, 0.5f);
         }
 
-        Destroy(gameObject, 0.5f);
     }
 
 }
