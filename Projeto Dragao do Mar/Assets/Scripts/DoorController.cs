@@ -5,7 +5,13 @@ public class DoorController : MonoBehaviour
     public Lever[] levers; // Array to store references to the levers
     public string secretCode = "1001"; // Example secret code (set to whatever you need)
     public GameObject door; // Reference to the door GameObject
+    Animator doorAnim;
+    bool isCodeCorrect;
 
+    private void Start()
+    {
+        doorAnim = door.GetComponent<Animator>();
+    }
     // Method to check if the levers match the secret code
     public void CheckCode()
     {
@@ -22,6 +28,7 @@ public class DoorController : MonoBehaviour
         // If the code matches, open the door
         if (currentCode == secretCode)
         {
+            isCodeCorrect = true;
             OpenDoor();
         }
     }
@@ -30,10 +37,8 @@ public class DoorController : MonoBehaviour
     private void OpenDoor()
     {
         // Example: move the door upward
-        while (door.transform.position.y < 5) 
-        {
-            door.transform.position += new Vector3(0, 5, 0); // Adjust the movement as needed
-        }
+        if(isCodeCorrect == true)
+            doorAnim.SetBool("open", true);
        
         Debug.Log("Door opened!");
     }
