@@ -11,7 +11,6 @@ public class PuzzleActivator : InteractableObject
     public GameObject[] objectsToShoot;
     public GameObject weaponObj;
     public GameObject puzzleUI;
-    public GameObject timer;
 
     // Method that gets called when the player interacts with the activator
     protected override void Interact()
@@ -23,9 +22,8 @@ public class PuzzleActivator : InteractableObject
         SummonObjects();
     }
 
-    void TeleportPlayer()
+    public void TeleportPlayer() // Move the player to the target position
     {
-        // Move the player to the target position
         player.transform.position = targetPosition.position;
         controller.playerCanMove = false;
     }

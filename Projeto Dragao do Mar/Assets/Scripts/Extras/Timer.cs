@@ -20,15 +20,21 @@ public class Timer : MonoBehaviour
         {
             conclusionPainel.SetActive(true);
             Time.timeScale = 0;
-            firstPersonController.playerCanMove = true;
-
+            PlayerStats.instance.SetUIingMode();
         }
         textMeshProUGUI.text = timerSpan.ToString(@"mm\:ss\:ff");
     }
     public void TryAgainBTN()
     {
         timer = 62;
+        conclusionPainel.SetActive(false);
         puzzleAct.SummonObjects();
+        puzzleAct.TeleportPlayer();
+    }
+    public void Goback()
+    {
+        PlayerStats.instance.SetWalkingMode();
+        conclusionPainel.SetActive(false);
     }
 }
 // https://stackoverflow.com/questions/463642/how-can-i-convert-seconds-into-hourminutessecondsmilliseconds-time
