@@ -17,6 +17,7 @@ public class PlayerStats : MonoBehaviour
 
     internal Vector3 velocity;
     Vector2 look;
+    public GameObject player;
 
     void Awake()
     {
@@ -98,6 +99,7 @@ public class PlayerStats : MonoBehaviour
     public void Teleport(Vector3 position, Quaternion rotation)
     {
         transform.position = position;
+        //player.Transform.Rotate;
         Physics.SyncTransforms();
         look.x = rotation.eulerAngles.x;
         look.y = rotation.eulerAngles.z;
