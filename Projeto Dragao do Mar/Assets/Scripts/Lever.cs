@@ -15,6 +15,9 @@ public class Lever : InteractableObject
     // Reference to the door controller script
     private DoorController doorController;
 
+    public AudioSource leverSound;
+    public AudioClip leverClip;
+
     private void Start()
     {
         doorController = FindObjectOfType<DoorController>();
@@ -46,6 +49,7 @@ public class Lever : InteractableObject
     {
         // Sync the animator and the lever state
         anim.SetBool("isDown", isDown);
+
     }
 
     void SetLeverMode()
@@ -69,6 +73,7 @@ public class Lever : InteractableObject
         UpdateLeverState();
         // Call the method in DoorController to check if the puzzle is solved
         doorController.CheckCode();
+        leverSound.PlayOneShot(leverClip);
 
     }
 }
