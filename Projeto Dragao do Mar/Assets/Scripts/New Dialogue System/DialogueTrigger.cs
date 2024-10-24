@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DialogueTrigger : InteractableObject
@@ -7,6 +8,7 @@ public class DialogueTrigger : InteractableObject
     public AudioSource audioSource;
     
     public PoliticalPoints ppPoints;
+    public QuestsSystem questsSys;
 
     private void Start()
     {

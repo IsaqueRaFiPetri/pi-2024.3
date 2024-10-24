@@ -119,6 +119,11 @@ public class DialogueManager : MonoBehaviour
     {
         currentTrigger.DialogueGivePoints(); // Use a referência ao DialogueTrigger armazenada
 
+        if (currentTrigger.dialogue.isPartOfQuests == true)
+        {
+            currentTrigger.questsSys.CompleteQuest();
+        }
+
         hasTriggered = false;
 
         PlayerStats.instance.SetWalkingMode();

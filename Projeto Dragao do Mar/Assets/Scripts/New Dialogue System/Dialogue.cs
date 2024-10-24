@@ -9,4 +9,5 @@ public class Dialogue
     public DialogueOption[] options; // Opções de resposta
     public bool hasGivedPoints;
     public int pointsToGive;
+    public bool isPartOfQuests;
 }
