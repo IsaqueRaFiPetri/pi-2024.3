@@ -10,4 +10,5 @@ public class Dialogue
     public bool hasGivedPoints;
     public int pointsToGive;
     public bool isPartOfQuests;
+    public NpcFunctions npcFunctions;
 }
