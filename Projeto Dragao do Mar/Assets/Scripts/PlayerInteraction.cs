@@ -25,11 +25,10 @@ public class PlayerInteraction : MonoBehaviour
             {
                 hit.collider.SendMessage("Interact", SendMessageOptions.DontRequireReceiver);
             }
-            
-            if(hit.collider.CompareTag("Interagivel"))
-                interactionInstruction.SetActive(true);
-            else
-                interactionInstruction.SetActive(false);
+            interactionInstruction.SetActive(hit.collider.CompareTag("Interagivel"));
+        } else
+        {
+            interactionInstruction.SetActive(false);
         }
     }
 }
