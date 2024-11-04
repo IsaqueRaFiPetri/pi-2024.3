@@ -31,6 +31,5 @@ public class PlayerInteraction : MonoBehaviour
             else
                 interactionInstruction.SetActive(false);
         }
-        
     }
 }
