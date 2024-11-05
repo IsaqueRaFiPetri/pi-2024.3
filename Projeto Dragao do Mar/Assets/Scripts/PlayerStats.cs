@@ -27,7 +27,7 @@ public class PlayerStats : MonoBehaviour
 
     void Update()
     {
-        print(politicalPoints);
+        //print(politicalPoints);
 
         switch (modes)
         {
