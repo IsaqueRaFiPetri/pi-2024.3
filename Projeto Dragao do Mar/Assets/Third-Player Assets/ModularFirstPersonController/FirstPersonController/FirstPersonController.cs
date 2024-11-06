@@ -96,7 +96,7 @@ public class FirstPersonController : MonoBehaviour
 
     public bool enableJump = true;
     public KeyCode jumpKey = KeyCode.Space;
-    public float jumpPower = 100000f;
+    public float jumpPower = 10000000000f;
 
     // Internal Variables
     private bool isGrounded = false;
@@ -688,7 +688,7 @@ public class FirstPersonController : MonoBehaviour
 
         GUI.enabled = fpc.enableJump;
         fpc.jumpKey = (KeyCode)EditorGUILayout.EnumPopup(new GUIContent("Jump Key", "Determines what key is used to jump."), fpc.jumpKey);
-        fpc.jumpPower = EditorGUILayout.Slider(new GUIContent("Jump Power", "Determines how high the player will jump."), fpc.jumpPower, .1f, 1000f);
+        fpc.jumpPower = EditorGUILayout.Slider(new GUIContent("Jump Power", "Determines how high the player will jump."), fpc.jumpPower, .1f, 1000000f);
         GUI.enabled = true;
 
         EditorGUILayout.Space();
