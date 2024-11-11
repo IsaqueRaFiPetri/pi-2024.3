@@ -2,15 +2,25 @@ using UnityEngine;
 
 public class LinePuzzle : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Transform player;
+    public Transform startPoint;
+    public float allowedDistance = 1.0f; // tolerância para erro
+    public BarController controller;
+
     void Start()
     {
-        
+        float distance = Vector3.Distance(player.position, startPoint.position);
+        if (distance > allowedDistance)
+        {
+            controller.RestartPuzzle();
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            controller.RestartPuzzle();
+        }
     }
 }
+
