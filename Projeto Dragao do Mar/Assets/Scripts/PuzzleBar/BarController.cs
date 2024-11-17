@@ -1,21 +1,21 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class BarController : InteractableObject
 {
     public bool isPuzzleActive = false;
-    //public Transform playerJoint;   //somente a Joint
+    public GameObject puzzlePainel;
 
     public Transform player;        //player Todo
     public Transform startPoint;    //Ponto de início do puzzle
 
     public GameObject line;
-    public BoxCollider lineCol;
+    public BoxCollider[] lineCol;
 
     protected override void Interact()
     {
-        StartPuzzle();
+        puzzlePainel.SetActive(true);
+        PlayerStats.instance.SetUIingMode();
     }
     
     void Update()
@@ -23,21 +23,18 @@ public class BarController : InteractableObject
         // Código para interromper o puzzle com a tecla Escape
         if (isPuzzleActive && Input.GetKeyDown(KeyCode.P))
         {
-            StopPuzzle();
+            EndPuzzle();
         }
     }
-    void StartPuzzle()
+    public void StartPuzzle()
     {
+        PlayerStats.instance.SetWalkingMode();
+        puzzlePainel.SetActive(false);
+
         isPuzzleActive = true;
         line.SetActive(true);
         Debug.Log("Puzzle Iniciado");
         // Aqui você ativa as funções específicas do puzzle
-    }
-    void StopPuzzle()
-    {
-        isPuzzleActive = false;
-        // Desativa componentes e configurações para parar o puzzle
-        Debug.Log("Puzzle Parado");
     }
     public void RestartPuzzle()
     {
