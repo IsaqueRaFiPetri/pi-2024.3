@@ -9,8 +9,7 @@ public class BarController : InteractableObject
     public Transform player;        //player Todo
     public Transform startPoint;    //Ponto de início do puzzle
 
-    public GameObject line;
-    public BoxCollider[] lineCol;
+    public GameObject challenge;
 
     protected override void Interact()
     {
@@ -32,7 +31,7 @@ public class BarController : InteractableObject
         puzzlePainel.SetActive(false);
 
         isPuzzleActive = true;
-        line.SetActive(true);
+        challenge.SetActive(true);
         Debug.Log("Puzzle Iniciado");
         // Aqui você ativa as funções específicas do puzzle
     }
@@ -45,7 +44,7 @@ public class BarController : InteractableObject
     internal void EndPuzzle()
     {
         isPuzzleActive = false;
-        line.SetActive(false);
+        challenge.SetActive(false);
         Debug.Log("Puzzle Completado!!! :-)");
     }
 }

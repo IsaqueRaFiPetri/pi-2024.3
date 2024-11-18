@@ -448,11 +448,11 @@ public class FirstPersonController : MonoBehaviour
     {
         Vector3 origin = new Vector3(transform.position.x, transform.position.y - (transform.localScale.y * .5f), transform.position.z);
         Vector3 direction = transform.TransformDirection(Vector3.down);
-        float distance = 2;
-
+        float distance = 3;
+        Debug.DrawRay(origin, direction * distance, Color.red);
         if (Physics.Raycast(origin, direction, out RaycastHit hit, distance))
         {
-            Debug.DrawRay(origin, direction * distance, Color.red);
+            print(hit.collider);
             isGrounded = true;
         }
         else

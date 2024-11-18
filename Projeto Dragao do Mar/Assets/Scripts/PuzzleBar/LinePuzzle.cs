@@ -15,8 +15,9 @@ public class LinePuzzle : MonoBehaviour
             controller.RestartPuzzle();
         }
     }
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
+        print("foi");
         if (other.CompareTag("Player"))
         {
             controller.RestartPuzzle();
