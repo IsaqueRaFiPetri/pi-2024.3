@@ -10,6 +10,7 @@ public class BarController : InteractableObject
     public Transform startPoint;    //Ponto de início do puzzle
 
     public GameObject challenge;
+    public QuestsSystem questSys;
 
     protected override void Interact()
     {
@@ -43,6 +44,8 @@ public class BarController : InteractableObject
 
     internal void EndPuzzle()
     {
+        questSys.isQuestComplete = true;
+        questSys.CompleteQuest();
         isPuzzleActive = false;
         challenge.SetActive(false);
         Debug.Log("Puzzle Completado!!! :-)");
