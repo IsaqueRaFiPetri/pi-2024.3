@@ -4,7 +4,7 @@ using System;
 
 public class Timer : MonoBehaviour
 {
-    static float timer = 62;
+    static float timer = 60;
     TimeSpan timerSpan = TimeSpan.FromSeconds(timer);
     public TextMeshProUGUI textMeshProUGUI;
     public GameObject conclusionPainel;
@@ -22,11 +22,11 @@ public class Timer : MonoBehaviour
             Time.timeScale = 0;
             PlayerStats.instance.SetUIingMode();
         }
-        textMeshProUGUI.text = timerSpan.ToString(@"mm\:ss\:ff");
+        textMeshProUGUI.text = timerSpan.ToString(@"ss");
     }
     public void TryAgainBTN()
     {
-        timer = 62;
+        timer = 60;
         conclusionPainel.SetActive(false);
         puzzleAct.SummonObjects();
         puzzleAct.TeleportPlayer();

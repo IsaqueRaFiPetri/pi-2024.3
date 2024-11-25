@@ -3,7 +3,7 @@ using TMPro;
 
 public class KillerCount : MonoBehaviour
 {
-    public static int bottleCount, totalCount = 2;
+    public static int bottleCount, totalCount = 10;
     public static bool hasKilledAll = false;
 
     public TextMeshProUGUI text;

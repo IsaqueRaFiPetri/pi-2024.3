@@ -11,6 +11,7 @@ public class PuzzleActivator : InteractableObject
     public GameObject[] objectsToShoot;
     public GameObject weaponObj;
     public GameObject puzzleUI;
+    public GameObject props;
 
     // Method that gets called when the player interacts with the activator
     protected override void Interact()
@@ -32,11 +33,23 @@ public class PuzzleActivator : InteractableObject
     {
         weaponObj.SetActive(true);
         puzzleUI.SetActive(true);
+        props.SetActive(true);
+
         // Loop through the array and activate or enable the shooting behavior
         foreach (GameObject obj in objectsToShoot)
         {
             // You can enable a shooting script, start an animation, etc.
             obj.SetActive(true); // Simple example of activating objects
         }
+    }
+
+    public void FinishGame()
+    {
+        weaponObj.SetActive(false);
+        puzzleUI.SetActive(false);
+
+        controller.playerCanMove = true;
+
+        Time.timeScale = 1.0f;
     }
 }
