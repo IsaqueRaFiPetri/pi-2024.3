@@ -100,13 +100,13 @@ Material:
     - _FEATHERS1COLOR1: {r: 0.7735849, g: 0.492613, b: 0.492613, a: 0}
     - _FEATHERS2COLOR: {r: 1, g: 0, b: 0, a: 0}
     - _FEATHERS2COLOR1: {r: 0.6792453, g: 0, b: 0, a: 0}
-    - _HAIRCOLOR: {r: 0, g: 0, b: 0, a: 0}
+    - _HAIRCOLOR: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 0}
     - _HAIRCOLOR1: {r: 1, g: 0, b: 0, a: 0}
     - _LEATHER1COLOR: {r: 0.0754902, g: 0.007843138, b: 0, a: 1}
     - _LEATHER1COLOR1: {r: 0.4811321, g: 0.2041155, b: 0.08851016, a: 1}
     - _LEATHER2COLOR: {r: 0.8396226, g: 0.8396226, b: 0.8396226, a: 1}
     - _LEATHER2COLOR1: {r: 0.4245283, g: 0.190437, b: 0.09011215, a: 1}
-    - _LEATHER3COLOR: {r: 0.8490566, g: 0.31753337, b: 0, a: 1}
+    - _LEATHER3COLOR: {r: 2, g: 1.5137255, b: 0, a: 1}
     - _LEATHER3COLOR1: {r: 0.1698113, g: 0.04637412, b: 0.02963688, a: 1}
     - _LEATHER4COLOR: {r: 0.122641504, g: 0, b: 0.007198014, a: 1}
     - _LEATHER4COLOR1: {r: 0.1698113, g: 0.04637412, b: 0.02963688, a: 1}
