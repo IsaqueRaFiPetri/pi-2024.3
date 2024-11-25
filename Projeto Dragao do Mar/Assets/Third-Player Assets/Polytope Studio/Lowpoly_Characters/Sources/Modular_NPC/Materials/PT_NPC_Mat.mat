@@ -100,7 +100,7 @@ Material:
     - _FEATHERS1COLOR1: {r: 0.7735849, g: 0.492613, b: 0.492613, a: 0}
     - _FEATHERS2COLOR: {r: 1, g: 0, b: 0, a: 0}
     - _FEATHERS2COLOR1: {r: 0.6792453, g: 0, b: 0, a: 0}
-    - _HAIRCOLOR: {r: 0.13725491, g: 0.019607844, b: 0, a: 0}
+    - _HAIRCOLOR: {r: 0, g: 0, b: 0, a: 0}
     - _HAIRCOLOR1: {r: 1, g: 0, b: 0, a: 0}
     - _LEATHER1COLOR: {r: 0.0754902, g: 0.007843138, b: 0, a: 1}
     - _LEATHER1COLOR1: {r: 0.4811321, g: 0.2041155, b: 0.08851016, a: 1}
