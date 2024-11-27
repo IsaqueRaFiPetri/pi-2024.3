@@ -10,6 +10,7 @@ public class MenuManager : MonoBehaviour
 
     public void Teleport(string tp)
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(tp);
     }
     public void SairJogo()
