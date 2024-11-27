@@ -15,10 +15,4 @@ public class Target : MonoBehaviour
             Destroy(gameObject, 0.2f);
         }
     }
-
-    public void Replay()
-    {
-        health = 1;
-    }
-
 }
